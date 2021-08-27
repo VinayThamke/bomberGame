@@ -1,0 +1,40 @@
+body{
+  background: linear-gradient(to right, blue, aqua);
+
+}
+
+table{
+  border: solid gold 2px;
+  padding: 0px;
+}
+
+tr{
+  border: solid gold 2px;
+  padding: 0px;
+
+
+}
+
+td{
+  border: solid gold 2px;
+    height: 8vw;
+    width: 16vh;
+    /* background: url("lock.svg"); */
+    text-align: center;
+    position: relative;
+}
+
+
+.container{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+h1{
+  color: white;
+}
+p{
+  color: white;
+  font-size: 20px;
+}
