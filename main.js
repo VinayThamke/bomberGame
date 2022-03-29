@@ -1,19 +1,28 @@
-var td = document.querySelectorAll('td');
-var img = document.querySelectorAll("img");
-var counter = document.getElementById('score');
-var clickAudio = new Audio("click.wav");
-var explosionAudio = new Audio("explosion.wav");
-var gameOver = new Audio("endgame.wav");
+let td = document.querySelectorAll('td');
+let img = document.querySelectorAll("img");
+let counter = document.getElementById('score');
+let clickAudio = new Audio("click.wav");
+let explosionAudio = new Audio("explosion.wav");
+let gameOver = new Audio("endgame.wav");
 
-var i = 0;
-var j = 0;
-var score = 0;
-var x = Math.floor((Math.random()* 16) + 1);
+let i = 0;
+let j = 0;
+let score = 0;
+let x = Math.floor((Math.random()* 16) + 1);
+let y = Math.floor((Math.random()* 16) + 1);
+console.log(x, y);
+
+if(x==y)
+{
+  const z = Math.floor((Math.random()* 16) + 1);
+  y = z;
+}
+console.log(x,y)
 
 for (let j=0; j<16; j++)
 {
   td[j].addEventListener("click", function(){
-    if(j==x)
+    if(j==x || j==y)
     {
       img[j].src = "bomb.png";
       explosionAudio.play();
