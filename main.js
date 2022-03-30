@@ -23,15 +23,18 @@ if(x==y)
   console.log(x, y);
 }
 
-
 for (let j=0; j<16; j++)
 {
-  td[j].addEventListener("click", function(){
+  td[j].addEventListener("click", function(e){
     if(j==x || j==y)
     {
       img[j].src = "bomb.png";
       explosionAudio.play();
       gameOver.play();
+      const gameOverHead = document.createElement("h1");
+      gameOverHead.innerText = "Game Over";
+      document.body.appendChild(gameOverHead);
+      // td[j].removeEventListener("click", e.target);
       // break;
     }
     else {
@@ -39,13 +42,8 @@ for (let j=0; j<16; j++)
       clickAudio.play();
       score += 1;
       counter.innerHTML = score;
+      // td[j].removeEventListener("click", e.target);
     }
-    if(score==14)
-  {
-    const gameOverHead = document.createElement("h1");
-    gameOverHead.innerText = "Game Over";
-    document.body.appendChild(gameOverHead);
-  }
   });
   
 }
