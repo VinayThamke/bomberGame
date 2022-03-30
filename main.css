@@ -1,40 +1,44 @@
-body{
+body {
   background: linear-gradient(to right, blue, aqua);
-
 }
 
-table{
+table {
   border: solid gold 2px;
   padding: 0px;
 }
 
-tr{
+tr {
   border: solid gold 2px;
   padding: 0px;
-
-
 }
 
-td{
-  border: solid gold 2px;
-    height: 8vw;
-    width: 16vh;
-    /* background: url("lock.svg"); */
-    text-align: center;
-    position: relative;
+td {
+  border: solid gold 6px;
+  height: 8vw;
+  width: 16vh;
+  /* background: url("lock.svg"); */
+  text-align: center;
+  position: relative;
+  filter: grayscale();
 }
 
-
-.container{
-display: flex;
-align-items: center;
-justify-content: center;
+/* img {
+  filter: grayscale();
+} */
+td:hover {
+  filter: none;
 }
 
-h1{
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
   color: white;
 }
-p{
+p {
   color: white;
   font-size: 20px;
 }

@@ -10,14 +10,19 @@ let j = 0;
 let score = 0;
 let x = Math.floor((Math.random()* 16) + 1);
 let y = Math.floor((Math.random()* 16) + 1);
-console.log(x, y);
+console.log(x,y)
 
 if(x==y)
 {
-  const z = Math.floor((Math.random()* 16) + 1);
-  y = z;
+  if(x==15)
+  {
+    y = y - 1
+  }else{
+    y = y + 1;
+  }
+  console.log(x, y);
 }
-console.log(x,y)
+
 
 for (let j=0; j<16; j++)
 {
@@ -35,5 +40,12 @@ for (let j=0; j<16; j++)
       score += 1;
       counter.innerHTML = score;
     }
+    if(score==14)
+  {
+    const gameOverHead = document.createElement("h1");
+    gameOverHead.innerText = "Game Over";
+    document.body.appendChild(gameOverHead);
+  }
   });
+  
 }
