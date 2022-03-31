@@ -19,14 +19,14 @@ td {
   /* background: url("lock.svg"); */
   text-align: center;
   position: relative;
-  filter: grayscale();
+  filter: none;
 }
 
 /* img {
   filter: grayscale();
 } */
 td:hover {
-  filter: none;
+  filter:drop-shadow(2px 2px 2px white);
 }
 
 .container {

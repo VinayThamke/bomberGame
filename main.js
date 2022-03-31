@@ -31,18 +31,14 @@ for (let j=0; j<16; j++)
       img[j].src = "bomb.png";
       explosionAudio.play();
       gameOver.play();
-      const gameOverHead = document.createElement("h1");
-      gameOverHead.innerText = "Game Over";
-      document.body.appendChild(gameOverHead);
-      // td[j].removeEventListener("click", e.target);
-      // break;
+      alert("Game Over");
     }
     else {
       img[j].src = "smiley.png";
       clickAudio.play();
       score += 1;
       counter.innerHTML = score;
-      // td[j].removeEventListener("click", e.target);
+      this.removeEventListener('click', arguments.callee);
     }
   });
   
